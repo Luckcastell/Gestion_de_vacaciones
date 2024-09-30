@@ -4,9 +4,39 @@
      background: linear-gradient( to bottom, #0011d0, #17a1fa);
 
 }
+.menu{
+     display: flex;
+     justify-content: end;
+}
+
+.botonRegistrarse{
+     background-color: #a1c8e2;
+     height: 30px;
+     width: 90;
+     margin-top: 5px;
+     margin-right: 5px;
+}
+
+.botonRegistrarse a{
+
+     text-decoration: none;
+
+     color: black;
+
+}
+
+
+.titulo{
+     
+     display: flex;
+     align-items: center;     
+     justify-content: center;
+     
+}
 
 .tarjeta{
      background-color: #a1c8e2;
+
      display:flex;
 
      flex-direction:column;
@@ -31,7 +61,7 @@
 
 }
 
-.titulo{
+.tituloT{
 
      font-size: 24px;
 
@@ -44,10 +74,11 @@
 
 }
 
-
 .cuerpo{
 
      padding: 10px;
+
+     border-color: black;
 
 }
 
@@ -64,6 +95,21 @@
 }
 
 .pie a{
+
+     background-color: #a1c8e2;
+     
+     height: 30px;
+
+     text-decoration: none;
+
+     color: black;
+
+}
+.pie button{  /* ESTE SERIA PROVISIONAL HASTA QUE SE PUEDA UASAR LOS LINK DE INICIO SIN PROBLEMAS */
+
+     background-color: #a1c8e2;
+     
+     height: 30px;
 
      text-decoration: none;
 
