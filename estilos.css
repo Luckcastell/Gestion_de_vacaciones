@@ -1,8 +1,12 @@
 @charset "utf-8";
 
+.pantalla{
+     background: linear-gradient( to bottom, #0011d0, #17a1fa);
+
+}
 
 .tarjeta{
-
+     background-color: #a1c8e2;
      display:flex;
 
      flex-direction:column;
@@ -20,6 +24,10 @@
      border-radius:15px;
 
      font-family: sans-serif;
+     
+     margin: 50px;
+     margin-top: 0px;
+     margin-bottom: 0px;
 
 }
 
@@ -29,6 +37,11 @@
 
      padding: 10px 10px 0 10px;;
 
+     
+     display: flex;
+     align-items: center;     
+     justify-content: center;
+
 }
 
 
@@ -36,7 +49,7 @@
 
      padding: 10px;
 
-    }
+}
 
 .pie{
 
@@ -56,7 +69,7 @@
 
      color: black;
 
-    }
+}
 
 .pie a:after {
 
@@ -74,9 +87,11 @@
 
      content: ""
 
-    }
+}
 
 
 #tarjetaMadre{
-     align-tracks:end;
+     display: flex;
+     align-items: center;     
+     justify-content: center;
 }
