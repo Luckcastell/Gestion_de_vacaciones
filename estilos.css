@@ -1,12 +1,23 @@
 @charset "utf-8";
 
-.pantalla{
+body{
      background: linear-gradient( to bottom, #0011d0, #17a1fa);
 
 }
+
+
+.titulo{
+     display: flex;
+     align-items: center;     
+     justify-content: center;
+
+     margin-bottom: 10px;
+
+}
+
 .menu{
      display: flex;
-     justify-content: end;
+     justify-content: flex-end;
      
 }
 
@@ -40,8 +51,6 @@
 }
 
 .botonRegistrarse a{
-     
-
      text-decoration: none;
 
      color: black;
@@ -49,12 +58,12 @@
 }
 
 
-.titulo{
-     
+.imagenLogo{
      display: flex;
      align-items: center;     
      justify-content: center;
-     
+
+ /*    margin-bottom: 10px;*/
 }
 
 .tarjeta{
@@ -124,7 +133,7 @@
      height: 30px;
 
      text-decoration: none;
-
+     
      color: black;
 
 }
