@@ -19,7 +19,7 @@
                 Empleado
             </div>
             <div class="cuerpo">
-                <img class="imagenTarjeta" src="imagenes/imagenPersonal.png" height="280px" alt="imagenAdministrador">
+                <center><img class="imagenTarjeta" src="imagenes/imagenPersonal.png" height="280px" alt="imagenPersonal"></center>
             </div>
             <div class="pie">     
                 <form action="inicioEmpleado.php" method="post">
@@ -32,7 +32,7 @@
                 Administrador
             </div>
             <div class="cuerpo">
-                <img class="imagenTarjeta" src="imagenes/imagenJefe.png" height="280px" alt="imagenAdministrador">
+                <center><img class="imagenTarjeta" src="imagenes/imagenJefe.png" height="280px" alt="imagenAdministrador"></center>
             </div>
             <div class="pie">
                 <form action="inicioAdmin.html" method="post">
