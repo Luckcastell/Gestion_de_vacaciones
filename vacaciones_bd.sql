@@ -27,9 +27,9 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
-  `IDUsuario` int(11) NOT NULL,
-  `Usuario` varchar(255) NOT NULL,
+CREATE TABLE `empleados` (
+  `id_empleado` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
   `Clave` varchar(255) NOT NULL,
   `CorreoElectronico` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,20 +39,20 @@ CREATE TABLE `usuarios` (
 --
 
 --
--- Indices de la tabla `usuarios`
+-- Indices de la tabla `empleados`
 --
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`IDUsuario`);
+ALTER TABLE `empleados`
+  ADD PRIMARY KEY (`id_empleado`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT de la tabla `empleados`
 --
-ALTER TABLE `usuarios`
-  MODIFY `IDUsuario` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `empleados`
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
