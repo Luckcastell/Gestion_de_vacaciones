@@ -33,7 +33,7 @@
                 Administrador
             </div>
             <div class="cuerpo">
-                <img class="imagenTarjeta" src="/imagenes/imagenJefe.png" height="280px" alt="imagenAdministrador"><!-- <br>
+                <img class="imagenTarjeta" src="imagenes/imagenJefe.png" height="280px" alt="imagenAdministrador"><!-- <br>
                 Si sos un administrador que quiere revisar o gestionar vacaciones entra aca.-->
             </div>
             <div class="pie">

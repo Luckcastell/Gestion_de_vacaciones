@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form action="IniciarSesion.php" method="POST">
+<form action="inicioEmpleadoBD.php" method="POST">
         <center><h1>INICIAR SESIÓN</h1></center>
         <br>
         <hr>
