@@ -11,7 +11,7 @@
             <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.html">Registrarse</a></button></p>
     </nav>
     <div class="titulo">
-        <img class="imagenLogo" src="/imagenes/imagenLogoRectangularConTexto2.png" height="160px" alt="Y P F">
+        <img class="imagenLogo" src="imagenes/imagenLogoRectangularConTexto2.png" height="160px" alt="Y P F">
     </div>
     <div id="tarjetaMadre">
         <div class="tarjeta">
@@ -19,11 +19,11 @@
                 Empleado
             </div>
             <div class="cuerpo">
-                <img class="imagenTarjeta" src="/imagenes/imagenPersonal.png" height="280px" alt="imagenAdministrador"><!-- <br>
+                <img class="imagenTarjeta" src="imagenes/imagenPersonal.png" height="280px" alt="imagenAdministrador"><!-- <br>
                 Si sos un empleado de cualquier puesto que quiere vacaciones entra aca.-->
             </div>
             <div class="pie">     
-                <form action="inicioEmpleado.html" method="post">
+                <form action="inicioEmpleado.php" method="post">
                     <button type="submit">Iniciar como Empleado</button>
                 </form>
             </div>
