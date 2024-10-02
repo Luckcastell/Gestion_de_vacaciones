@@ -2,7 +2,7 @@
     session_start();
     include('Conexion.php');
 
-    if (isset($_POST['Usuario']) && isset($_POST['Clave']) ) {
+    if (isset($_POST['Empleado']) && isset($_POST['Clave']) ) {
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -11,10 +11,10 @@
             return $data;
         }
 
-        $Usuario = validate($_POST['Usuario']);
+        $Empleado = validate($_POST['Empleado']);
         $Clave = validate($_POST['Clave']);
 
-        if (empty($Usuario)) {
+        if (empty($Empleado)) {
             header("Location: inicioEmpleado.php?error1=El Usuario es requerido");
             exit();
         }
@@ -25,14 +25,14 @@
         else{
             // $Clave = md5($Clave);
 
-            $sql = "SELECT * FROM usuarios WHERE Usuario = '$Usuario' AND Clave = '$Clave'";
+            $sql = "SELECT * FROM empleados WHERE Empleado = '$Empleado' AND Clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
             if (mysqli_num_rows($resultado) === 1) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['Usuario'] === $Usuario && $row['Clave'] === $Clave){
-                    $_SESSION['Usuario'] = $row['Usuario'];
-                    $_SESSION['IDUsuario'] = $row['IDUsuario'];
+                if($row['Empleado'] === $Empleado && $row['Clave'] === $Clave){
+                    $_SESSION['Empleado'] = $row['Empleado'];
+                    $_SESSION['id_empleado'] = $row['id_empleado'];
                     $_SESSION['CorreoElectronico'] = $row['CorreoElectronico'];
                     header("Location: Menu.php");
                     exit();
