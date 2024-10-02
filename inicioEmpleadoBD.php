@@ -2,7 +2,7 @@
     session_start();
     include('Conexion.php');
 
-    if (isset($_POST['Empleado']) && isset($_POST['Clave']) ) {
+    if (isset($_POST['Nombre']) && isset($_POST['Clave']) ) {
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -11,7 +11,7 @@
             return $data;
         }
 
-        $Empleado = validate($_POST['Empleado']);
+        $Empleado = validate($_POST['Nombre']);
         $Clave = validate($_POST['Clave']);
 
         if (empty($Empleado)) {
@@ -25,13 +25,13 @@
         else{
             // $Clave = md5($Clave);
 
-            $sql = "SELECT * FROM empleados WHERE Empleado = '$Empleado' AND Clave = '$Clave'";
+            $sql = "SELECT * FROM empleados WHERE Nombre = '$Empleado' AND Clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
             if (mysqli_num_rows($resultado) === 1) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['Empleado'] === $Empleado && $row['Clave'] === $Clave){
-                    $_SESSION['Empleado'] = $row['Empleado'];
+                if($row['Nombre'] === $Empleado && $row['Clave'] === $Clave){
+                    $_SESSION['Nombre'] = $row['Nombre'];
                     $_SESSION['id_empleado'] = $row['id_empleado'];
                     $_SESSION['CorreoElectronico'] = $row['CorreoElectronico'];
                     header("Location: Menu.php");

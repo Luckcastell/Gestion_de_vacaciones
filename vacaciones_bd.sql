@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `empleados` (
   `id_empleado` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
+  `Nombre` varchar(255) NOT NULL,
   `Clave` varchar(255) NOT NULL,
   `CorreoElectronico` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
