@@ -31,7 +31,7 @@
         <br>
         <i class="fa-solid fa-user"></i>
         <label>Usuario</label>
-        <center><input type="text" name="Usuario" placeholder ="Nombre de Usuario"></center>
+        <center><input type="text" name="Empleado" placeholder ="Nombre de Usuario"></center>
         <br>
         <i class="fa-solid fa-key"></i>
         <label>Contraseña</label>
