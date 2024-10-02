@@ -32,9 +32,9 @@
                 $row = mysqli_fetch_assoc($resultado);
                 if($row['Usuario'] === $Usuario && $row['Clave'] === $Clave){
                     $_SESSION['Usuario'] = $row['Usuario'];
-                    $_SESSION['IDUsuarios'] = $row['IDUsuarios'];
+                    $_SESSION['IDUsuario'] = $row['IDUsuario'];
                     $_SESSION['CorreoElectronico'] = $row['CorreoElectronico'];
-                    header("Location: Home.php");
+                    header("Location: Menu.php");
                     exit();
                 }
                 else{
