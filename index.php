@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="menu">
-            <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.html">Registrarse</a></button></p>
+            <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.php">Registrarse</a></button></p>
     </nav>
     <div class="titulo">
         <img class="imagenLogo" src="imagenes/imagenLogoRectangularConTexto2.png" height="160px" alt="Y P F">

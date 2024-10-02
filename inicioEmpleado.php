@@ -31,16 +31,16 @@
         <br>
         <i class="fa-solid fa-user"></i>
         <label>Usuario</label>
-        <center><input type="text" name="Nombre" placeholder ="Nombre de Usuario"></center>
+        <center><input type="text" name="nombre" placeholder ="Nombre de Usuario"></center>
         <br>
         <i class="fa-solid fa-key"></i>
         <label>Contraseña</label>
-        <center><input type="password" name="Clave" placeholder ="Contraseña"></center>
+        <center><input type="password" name="clave" placeholder ="Contraseña"></center>
         <br>
         <hr>
         <center><button type="submit">Iniciar Sesión</button></center>
         <br>
-        <center><a href="registro.html">¿No tienes cuenta?</a></center>
+        <center><a href="registro.php">¿No tienes cuenta?</a></center>
         
 
      </form>
