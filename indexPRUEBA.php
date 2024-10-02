@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS\index.css">
+    <link rel="stylesheet" href="CSS\indexPRUEBA.css">
     <title>Gestion de Vacaciones </title>
 </head>
 <body>
-    <nav class="menu">
+<header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#"><img class="log" src="imagenes\Logo_de_YPF.png" alt="logoYPF"></a>
+                <input type="checkbox" id="menu">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="registro.html">Registrarte</a></li>
+                        <li><a href="#">Acerca De</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav class="menu1">
             <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.html">Registrarse</a></button></p>
     </nav>
     <div class="titulo">
