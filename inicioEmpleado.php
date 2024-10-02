@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/SesionIniciar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Inicio de sesión</title>
 </head>
 <body>
@@ -18,11 +19,11 @@
         <hr>
 
         <?php
-            if (isset($_GET['error1'])) {
+            if (isset($_GET['error'])) {
             ?>
             <p class="error">
                 <?php
-                    echo $_GET['error1']
+                    echo $_GET['error']
                  ?>
             </p>
         <?php
@@ -38,6 +39,9 @@
         <center><input type="password" name="clave" placeholder ="Contraseña"></center>
         <br>
         <hr>
+        <div class="g-recaptcha" data-sitekey="6Lfm7lUqAAAAAHKX6wXP-RE0yRr7ieeVHn9yUJz5">
+        </div>
+        <br>
         <center><button type="submit">Iniciar Sesión</button></center>
         <br>
         <center><a href="registro.php">¿No tienes cuenta?</a></center>

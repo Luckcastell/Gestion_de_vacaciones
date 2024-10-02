@@ -14,12 +14,24 @@
         $Empleado = validate($_POST['nombre']);
         $Clave = validate($_POST['clave']);
 
-        if (empty($Empleado)) {
-            header("Location: inicioEmpleado.php?error1=El Usuario es requerido");
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $captcha = $_POST['g-recaptcha-response'];
+        $secretKey ="6Lfm7lUqAAAAAGyD4MVXCXmhOp9plTjDIpN6AJSP";
+
+        $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha&remoteip=$ip");
+
+        $atributos = json_decode($respuesta, true);
+
+        if(!$atributos['success']){
+            header("Location: inicioEmpleado.php?error=Verificar captcha");
+            exit();
+        }
+        elseif (empty($Empleado)) {
+            header("Location: inicioEmpleado.php?error=El Usuario es requerido");
             exit();
         }
         elseif (empty($Clave)) {
-            header("Location: inicioEmpleado.php?error1=La Clave es requerida");
+            header("Location: inicioEmpleado.php?error=La Clave es requerida");
             exit();
         }
         else{
@@ -37,12 +49,12 @@
                     exit();
                 }
                 else{
-                    header("Location: inicioEmpleado.php?error1=El Usuario o la Clave son incorrectas");
+                    header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
                     exit();
                 }
             }
             else{
-                header("Location: inicioEmpleado.php?error1=El Usuario o la Clave son incorrectas");
+                header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
                 exit();
                 }
         }

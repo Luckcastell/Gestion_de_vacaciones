@@ -29,6 +29,8 @@
             <input type="password" id="clave" name="contrasena" required><br><br>
 
             <input type="submit" value="Registrar">
+            <br>
+        <center><a href="inicioEmpleado.php">¿Ya tienes cuenta?</a></center>
         </form>
     </div>
 </body>
