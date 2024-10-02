@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-10-2024 a las 04:18:38
+-- Tiempo de generación: 02-10-2024 a las 22:04:37
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -24,14 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `empleados`
 --
 
 CREATE TABLE `empleados` (
   `id_empleado` int(11) NOT NULL,
-  `Nombre` varchar(255) NOT NULL,
-  `Clave` varchar(255) NOT NULL,
-  `CorreoElectronico` varchar(255) NOT NULL
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(255) NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `telefono` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `clave` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -52,7 +55,7 @@ ALTER TABLE `empleados`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
