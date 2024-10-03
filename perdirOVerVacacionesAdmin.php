@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">            <!-- se podria ver la imagen que pusimos pero el resto esta listo-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
                 Ingresa aqui para ver tu calendario.</center>
             </div>
             <div class="pie">
-                <form action="calendario.html" method="post">
+                <form action="calendarioAdmin.html" method="post">
                     <button type="submit">Ver tu calendario aqui.</button>
                 </form>
             </div>

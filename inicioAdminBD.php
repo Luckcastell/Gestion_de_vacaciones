@@ -1,5 +1,6 @@
 <?php
-    session_start();            // Todo listo aca
+    session_start();   // Nos falta Terminar de dar los ultimos toques al codigo para iniciar como admin
+
     include('Conexion.php');
 
     if (isset($_POST['nombre']) && isset($_POST['clave']) ) {
@@ -10,7 +11,7 @@
             return $data;
         }
 
-        $Empleado = validate($_POST['nombre']);
+        $Admin = validate($_POST['nombre']);
         $Clave = validate($_POST['clave']);
 
         $ip = $_SERVER['REMOTE_ADDR'];
@@ -22,44 +23,44 @@
         $atributos = json_decode($respuesta, true);
 
         if(!$atributos['success']){
-            header("Location: inicioEmpleado.php?error=Verificar captcha");
+            header("Location: inicioAdmin.php?error=Verificar captcha");
             exit();
         }
-        elseif (empty($Empleado)) {
-            header("Location: inicioEmpleado.php?error=El Usuario es requerido");
+        elseif (empty($Admin)) {
+            header("Location: inicioAdmin.php?error=El Usuario es requerido");
             exit();
         }
         elseif (empty($Clave)) {
-            header("Location: inicioEmpleado.php?error=La Clave es requerida");
+            header("Location: inicioAdmin.php?error=La Clave es requerida");
             exit();
         }
         else{
 
-            $sql = "SELECT * FROM empleados WHERE nombre = '$Empleado' AND clave = '$Clave'";
+            $sql = "SELECT * FROM admin WHERE nombre = '$Admin' AND clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
             if (mysqli_num_rows($resultado) === 1) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['nombre'] === $Empleado && $row['clave'] === $Clave){
+                if($row['nombre'] === $Admin && $row['clave'] === $Clave){
                     $_SESSION['nombre'] = $row['nombre'];
-                    $_SESSION['id_empleado'] = $row['id_empleado'];
+                    $_SESSION['id_admin'] = $row['id_admin'];
                     $_SESSION['email'] = $row['email'];
-                    header("Location: perdirOVerVacacionesEmpleado.php");
+                    header("Location: perdirOVerVacacionesAdmin.php");
                     exit();
                 }
                 else{
-                    header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
+                    header("Location: inicioAdmin.php?error=El Usuario o la Clave son incorrectas");
                     exit();
                 }
             }
             else{
-                header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
+                header("Location: inicioAdmin.php?error=El Usuario o la Clave son incorrectas");
                 exit();
             }
         }
     }
     else{
-        header("Location: inicioEmpleado.php");
+        header("Location: inicioAdmin.php");
         exit();
     }
 

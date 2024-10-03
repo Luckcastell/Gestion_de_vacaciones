@@ -1,7 +1,7 @@
+<?php                       // Lo  unico que faltaria es revisar como inserta la contraseña, 
+                            // porque la inserta encriptada en la base de datos y no es lo mismo
 
-<?php
 include('Conexion.php'); // Incluye la conexión a la base de datos
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];

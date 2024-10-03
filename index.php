@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">            <!-- Todo listo aca -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS\index.css">
-    <title>Gestion de Vacaciones </title>
+    <title>Gestion de vacaciones</title>
 </head>
 <body>
     <nav class="menu">
@@ -35,7 +35,7 @@
                 <center><img class="imagenTarjeta" src="imagenes/imagenJefe.png" height="280px" alt="imagenAdministrador"></center>
             </div>
             <div class="pie">
-                <form action="inicioAdmin.html" method="post">
+                <form action="inicioAdmin.php" method="post">
                     <button type="submit">Iniciar como administrador</button>
                 </form>
             </div>
