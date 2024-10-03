@@ -44,7 +44,7 @@
                     $_SESSION['nombre'] = $row['nombre'];
                     $_SESSION['id_empleado'] = $row['id_empleado'];
                     $_SESSION['email'] = $row['email'];
-                    header("Location: Menu.php");
+                    header("Location: perdirOVerVacaciones.php");
                     exit();
                 }
                 else{
@@ -55,7 +55,7 @@
             else{
                 header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
                 exit();
-                }
+            }
         }
     }
     else{
