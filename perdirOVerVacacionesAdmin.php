@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION['nombre'])) {
+    if (!isset($_SESSION['email'])) {
         // Si no hay sesión iniciada, redirige al Inicio :)
         header("Location: index.php");
         exit();
