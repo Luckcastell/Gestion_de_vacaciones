@@ -15,7 +15,6 @@
                 <nav class="navbar">
                     <ul>
                         <li><a href="registro.php">Registrarte</a></li>
-                        <li><a href="#">Sobre YPF (?</a></li>
                         
                     </ul>
                 </nav>
