@@ -26,7 +26,7 @@
             exit();
         }
         elseif (empty($Empleado)) {
-            header("Location: inicioEmpleado.php?error=El Usuario es requerido");
+            header("Location: inicioEmpleado.php?error=El Mail es requerido");
             exit();
         }
         elseif (empty($Clave)) {

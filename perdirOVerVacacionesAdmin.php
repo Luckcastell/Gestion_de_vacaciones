@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">            <!-- se podria ver la imagen que pusimos pero el resto esta listo-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS\perdirOVerVacaciones.css">
-    <title>Perdir o ver vacaciones</title>
-    <?php
+<?php
     session_start();
     if (!isset($_SESSION['nombre'])) {
         // Si no hay sesión iniciada, redirige al Inicio :)
@@ -13,6 +6,14 @@
         exit();
     }
     ?>
+
+<!DOCTYPE html>
+<html lang="en">            <!-- se podria ver la imagen que pusimos pero el resto esta listo-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\perdirOVerVacaciones.css">
+    <title>Perdir o ver vacaciones</title>
 </head>
 <body>
     <div class="titulo">

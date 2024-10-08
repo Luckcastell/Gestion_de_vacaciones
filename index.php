@@ -7,7 +7,22 @@
     <title>Gestion de vacaciones</title>
 </head>
 <body>
-    <nav class="menu">
+<header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#"><img class="log" src="imagenes\YPF.png" alt="logoYPF"></a>
+                <input type="checkbox" id="menu">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="registro.php">Registrarte</a></li>
+                        <li><a href="#">Sobre YPF (?</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav class="menu1">
             <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.php">Registrarse</a></button></p>
     </nav>
     <div class="titulo">
