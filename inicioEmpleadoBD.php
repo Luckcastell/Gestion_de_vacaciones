@@ -2,7 +2,7 @@
     session_start();            // Todo listo aca
     include('Conexion.php');
 
-    if (isset($_POST['nombre']) && isset($_POST['clave']) ) {
+    if (isset($_POST['email']) && isset($_POST['clave']) ) {
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -10,7 +10,7 @@
             return $data;
         }
 
-        $Empleado = validate($_POST['nombre']);
+        $Empleado = validate($_POST['email']);
         $Clave = validate($_POST['clave']);
 
         $ip = $_SERVER['REMOTE_ADDR'];
@@ -35,13 +35,13 @@
         }
         else{
 
-            $sql = "SELECT * FROM empleados WHERE nombre = '$Empleado' AND clave = '$Clave'";
+            $sql = "SELECT * FROM empleados WHERE email = '$Empleado' AND clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
             if (mysqli_num_rows($resultado) === 1) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['nombre'] === $Empleado && $row['clave'] === $Clave){
-                    $_SESSION['nombre'] = $row['nombre'];
+                if($row['email'] === $Empleado && $row['clave'] === $Clave){
+                    $_SESSION['email'] = $row['email'];
                     $_SESSION['id_empleado'] = $row['id_empleado'];
                     $_SESSION['email'] = $row['email'];
                     header("Location: perdirOVerVacacionesEmpleado.php");

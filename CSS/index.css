@@ -155,7 +155,7 @@ body{
      content: ""
 
 }
-.pie button{  /* ESTE SERIA PROVISIONAL HASTA QUE SE PUEDA UASAR LOS LINK DE INICIO SIN PROBLEMAS */
+.pie button{ 
 
      background-color: #a1c8e2;
      
@@ -165,4 +165,5 @@ body{
 
      color: black;
 
+     border-radius: 10px;
 }

@@ -3,7 +3,7 @@
 
     include('Conexion.php');
 
-    if (isset($_POST['nombre']) && isset($_POST['clave']) ) {
+    if (isset($_POST['email']) && isset($_POST['clave']) ) {
         function validate($data){
             $data = trim($data);
             $data = stripslashes($data);
@@ -11,7 +11,7 @@
             return $data;
         }
 
-        $Admin = validate($_POST['nombre']);
+        $Admin = validate($_POST['email']);
         $Clave = validate($_POST['clave']);
 
         $ip = $_SERVER['REMOTE_ADDR'];
@@ -36,13 +36,13 @@
         }
         else{
 
-            $sql = "SELECT * FROM admin WHERE nombre = '$Admin' AND clave = '$Clave'";
+            $sql = "SELECT * FROM admin WHERE email = '$Admin' AND clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
             if (mysqli_num_rows($resultado) === 1) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['nombre'] === $Admin && $row['clave'] === $Clave){
-                    $_SESSION['nombre'] = $row['nombre'];
+                if($row['email'] === $Admin && $row['clave'] === $Clave){
+                    $_SESSION['email'] = $row['email'];
                     $_SESSION['id_admin'] = $row['id_admin'];
                     $_SESSION['email'] = $row['email'];
                     header("Location: perdirOVerVacacionesAdmin.php");
