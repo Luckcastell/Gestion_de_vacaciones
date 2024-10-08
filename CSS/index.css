@@ -16,13 +16,10 @@ body{
 }
 
 .container{
-     max-width: 1100px;
+     width: 1100px;
      margin: 0 auto;
- }
-
- .back{
-     padding: 32px 0;
      background-color: white;
+     height: 50px;
  }
 
  .menu{
@@ -51,6 +48,7 @@ body{
  .menu .navbar ul li a{
      font-size: 18px;
      padding: 20px;
+     margin: 5px;
      color: rgb(14, 60, 121);
      display: flex;
      align-items: center;
@@ -79,6 +77,7 @@ body{
      align-items: center;     
      justify-content: center;
 
+     padding-top: 50px;
      margin-bottom: 10px;
 
 }
