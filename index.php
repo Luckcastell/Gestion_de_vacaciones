@@ -14,16 +14,16 @@
                 <input type="checkbox" id="menu">
                 <nav class="navbar">
                     <ul>
-                        <li><a href="registro.php">Registrarte</a></li>
+                        <li><a class="botonRegistrarse" href="registro.php">Registrarte</a></li>
                         
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <nav class="menu1">
+<!--<nav class="menu1">
             <p class="botonRegistrarse" >Si no tienes cuenta ingresa aqui: <button class="botonRegistrarse"><a href="registro.php">Registrarse</a></button></p>
-    </nav>
+    </nav>-->
     <div class="titulo">
         <img class="imagenLogo" src="imagenes/imagenLogoRectangularConTexto2.png" height="160px" alt="Y P F">
     </div>

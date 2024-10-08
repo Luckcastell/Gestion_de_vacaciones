@@ -52,9 +52,9 @@ body{
      font-size: 18px;
      padding: 20px;
      color: rgb(14, 60, 121);
-     display: block;
+     display: flex;
+     align-items: center;
  }
- 
  .menu .navbar ul li a:hover{
      color:  #248cd1;
  }
@@ -99,7 +99,7 @@ body{
      display: flex;
 }
 
-.botonRegistrarse{
+/*.botonRegistrarse{
      border: solid;
      background-color: #a1c8e2;
      height: 30px;
@@ -107,7 +107,15 @@ body{
      margin-top: 5px;
      margin-right: 5px;
      margin-bottom: 0px;
-     font-size: 15px;
+     display: 15px;
+}*/
+.botonRegistrarse{
+     border: solid;
+     background-color: #a1c8e2;
+     height: 30px;
+     width: 90;
+     display: 15px;
+     padding: 10px;
 }
 .botonRegistrarse a{
      text-decoration: none;
