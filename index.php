@@ -21,7 +21,7 @@
         </div>
     </header>
     <div class="titulo">
-        <img class="imagenLogo" src="imagenes/imagenLogoRectangularConTexto2.png" height="160px" alt="Y P F">
+        <img class="imagenLogo" src="imagenes/imagenLogoRectangular.png" height="160px" alt="Y P F">
     </div>
     <div class="tarjetaMadre">
         <div class="tarjeta">
