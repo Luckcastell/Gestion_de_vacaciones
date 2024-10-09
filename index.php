@@ -7,15 +7,14 @@
     <title>Gestion de vacaciones</title>
 </head>
 <body>
-<header>
+    <header>
         <div class="back">
             <div class="menu container">
-                <a href="#"><img class="log" src="imagenes\YPF.png" alt="logoYPF"></a>
+                <img class="log" src="imagenes\YPF.png" alt="logoYPF">
                 <input type="checkbox" id="menu">
                 <nav class="navbar">
                     <ul>
-                        <li><a class="botonRegistrarse" href="registro.php">Registrarte</a></li>
-                        
+                        <li><a class="botonRegistrarse" href="registro.php">Registrarte</a></li>   
                     </ul>
                 </nav>
             </div>
