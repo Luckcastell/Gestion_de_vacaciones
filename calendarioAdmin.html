@@ -25,87 +25,78 @@
         </div>
     </div>
 
-<script>
-    $(document).ready(function(){
-        $('#calendarioweb').fullCalendar({
-            header:{
-                left:'month,basicWeek, basicDay, agendaWeek, agendaDay, miboton',
-                center:'title',
-                rigth:'today,prev,next'
-            },
-            customButtons:{
-                miboton:{
-                    text: "boton1", 
-                    click: function(){
-                        alert("accion del boton1"); 
-                    }
-                }
-            },
-            dayClick:function(date,jsEvent, view){
-                alert("Valor seleccionado:"+date. format());
-                alert("Vista actual:"+ view.name);
-                $(this).css ('background-color' , 'red');
+  <script>
+      $(document).ready(function(){
+          $('#calendarioweb').fullCalendar({
+              header:{
+                //left:'month,basicWeek,basicDay, agendaWeek, agendaDay, miboton',
+                  left:'month,basicWeek, cargaVacas',
+                  center:'title',
+                  rigth:'today, prev,next,'
+              },
+              customButtons:{
+                  cargaVacas:{
+                      text: "cargar", 
+                      click: function(){
+                          alert("accion del boton1"); 
+                      }
+                  }
+              },
+              dayClick:function(date,jsEvent, view){
+                //alert("Valor seleccionado: "+date. format());
+                //alert("Vista actual:"+ view.name);
+                  $(this).css ('background-color' , 'grey');
 
-                $("#exampleModal").modal(); 
-            }, 
-            eventSources:[{
-                events:[
-                {
-                    title: 'evento 1, un dia', 
-                    descripcion: "primera descripcion", 
-                    start: '2024-10-07', 
-                    color:"#FF0F0", 
-                    textColor: "FFFFFF"
-                }, 
-                {
-                    title: 'evento 2, mas de un dia', 
-                    descripcion: "segunda descripcion", 
-                    start: '2024-10-10', 
-                    end: '2024-10-12'
-                }, 
-                {
-                    title: 'evento 3, una hora del dia', 
-                    descripcion: "tercera descripcion", 
-                    start: '2024-10-03T12:30:00', 
-                    allDay: false, 
-                    color:"#FFF000", 
-                    textColor: "#000000"
-                }
-                ], 
-                color:"black", 
-                textColor: "yellow"
-            }], 
-            eventClick: function(calEvent, jsEvent, view){
-                $('#tituloEvento').html(calEvent.title); 
-                $('#descripcionEvento').html(calEvent.descripcion); 
-                $("#exampleModal").modal(); 
-            }
-        }); 
-    }); 
-</script>    
+                  $("#exampleModal").modal(); 
+              }, 
+              eventSources:[{
+                  events:[
+                  {
+                      title: 'nombre y apellido', 
+                      descripcion: 'nombre y apellido del 2024-10-07 hasta el 2024-10-09',
+                      start: '2024-10-07',  
+                      end: '2024-10-09'
+                  }, 
+                  {
+                      title: 'nombre y apellido', 
+                      descripcion: 'nombre y apellido del 2024-10-10 hasta el 2024-10-14  ',
+                      start: '2024-10-10', 
+                      end: '2024-10-14'
+                  }       
+                  ],  
+                  color:"#a1c8e2", 
+                  textColor: "FFFFFF"
+              }], 
+              eventClick: function(calEvent, jsEvent, view){
+                  $('#tituloEvento').html(calEvent.title); 
+                  $('#descripcionEvento').html(calEvent.descripcion); 
+                  $("#exampleModal").modal(); 
+              }
+          }); 
+      }); 
+  </script>    
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tituloEvento"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div id="descripcionEvento"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success">Agregar</button>
-        <button type="button" class="btn btn-success">Modificar</button>
-        <button type="button" class="btn btn-danger">Borrar</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloEvento"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="descripcionEvento"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Agregar</button>
+          <button type="button" class="btn btn-success">Modificar</button>
+          <button type="button" class="btn btn-danger">Borrar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>
