@@ -3,7 +3,7 @@
 <head>                      <!-- porque la inserta encriptada en la base de datos y no es lo mismo-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/registro.css">
     <title>Registro de sesión</title>
 </head>
 <body>
