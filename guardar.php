@@ -8,6 +8,7 @@ session_start();
     }
 // Obtener datos del formulario
 
+$nombre = $_POST['nombre'];
 $fecha_inicio = $_POST['fecha_inicio'];
 $fecha_final = $_POST['fecha_final'];
 
@@ -19,14 +20,20 @@ if ($id_empleado === null) {
 }
 
 // Insertar los datos en la base de datos
-$sql = "INSERT INTO vacaciones (id_empleado, fecha_inicio, fecha_final, estado) VALUES (?, ?, ?, 'En espera')";
+
+// $sql = "INSERT INTO vacaciones (id_empleado, fecha_inicio, fecha_final, estado) VALUES (?, ?, ?, 'En espera')";
+// $stmt = $conexion->prepare($sql);
+$sql = "INSERT INTO `eventos` (`id`, `title`, `descripcion`, `color`, `textColor`, `start`, `end`) VALUES (NULL, ?, ?, '#afafaf', '#FFFFFF', ?, ?)";
 $stmt = $conexion->prepare($sql);
+
 
 if ($stmt === false) {
     die('Error pidiendo vacaciones: ' . $conexion->error);
 }
 
-$stmt->bind_param("iss", $id_empleado, $fecha_inicio, $fecha_final);
+// $stmt->bind_param("iss", $id_empleado, $fecha_inicio, $fecha_final);
+$aux = "Nombre: ". $nombre. ", ID: ". $id_empleado. ", fecha inicio: ". $fecha_inicio. ", fecha final: ". $fecha_final;
+$stmt->bind_param("ssss", $nombre, $aux, $fecha_inicio, $fecha_final);
 
 if ($stmt->execute()) {
     header("Location: formulario.php?uf=¡se ha enviado la petición exitosamente!");

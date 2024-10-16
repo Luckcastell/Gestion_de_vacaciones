@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2024 a las 01:21:55
+-- Tiempo de generación: 16-10-2024 a las 05:09:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -42,8 +42,9 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `title`, `descripcion`, `color`, `textColor`, `start`, `end`) VALUES
-(1, 'Luca Castelli', 'Luca Castelli del 2024-10-16 al 2024-10-18', '#afafaf', '#FFFFFF', '2024-10-16', '2024-10-18'),
-(2, 'Liliana Calle', 'Liliana Calle del 2024-10-23 al 2024-10-26', '#00780f', '#FFFFFF', '2024-10-23', '2024-10-26');
+(1, 'Luca Castelli', 'laura gutierrez del 2024-10-16 al 2024-10-18', '#afafaf', '#FFFFFF', '2024-10-16', '2024-10-18'),
+(2, 'Liliana Calle', 'laura gutierrez del 2024-10-23 al 2024-10-26', '#00780f', '#FFFFFF', '2024-10-23', '2024-10-26'),
+(64, 'Luca Castelli', 'Nombre: Luca Castelli, ID: 1, fecha inicio: 2024-10-24, fecha final: 2024-10-31', '#afafaf', '#FFFFFF', '2024-10-24', '2024-10-31');
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +64,7 @@ ALTER TABLE `eventos`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

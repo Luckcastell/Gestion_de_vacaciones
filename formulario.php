@@ -40,6 +40,9 @@
             }
         ?>    
     <br>
+        <label for="Nombre">Nombre y apellido:</label>
+        <input type="string" id="Nombre" name="nombre" required><br><br>
+
         <label for="fechaA">Fecha Inicio:</label>
         <input type="date" id="fechaA" name="fecha_inicio" required><br><br>
 
