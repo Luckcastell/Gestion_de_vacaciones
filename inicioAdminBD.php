@@ -44,7 +44,6 @@
                 if($row['email'] === $Admin && $row['clave'] === $Clave){
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['id_admin'] = $row['id_admin'];
-                    $_SESSION['email'] = $row['email'];
                     header("Location: perdirOVerVacacionesAdmin.php");
                     exit();
                 }

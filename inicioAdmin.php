@@ -32,7 +32,7 @@
         <br>
         <i class="fa-solid fa-user"></i>
         <label>Usuario Administrador</label>
-        <center><input type="text" name="email" placeholder ="Nombre de Usuario Administrador"></center>
+        <center><input type="email" name="email" placeholder ="Nombre de Usuario Administrador"></center>
         <br>
         <i class="fa-solid fa-key"></i>
         <label>Contraseña</label>
