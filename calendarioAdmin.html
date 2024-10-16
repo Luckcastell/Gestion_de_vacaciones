@@ -60,7 +60,7 @@
                 $("#ModalEventos").modal(); // muestra el modal 
             }, 
 
-            events:'http://localhost/calendarioweb/eventos.php', 
+            events:'http://localhost/Gestion_de_vacaciones/eventos.php', 
 
             eventClick: function(calEvent, jsEvent, view){
                 // H2
@@ -103,35 +103,35 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-        <center>
+        <!-- <div class="modal-body">
+        
             Id: <input type="text" id="txtId" name="txtId" /><br/>
             Fecha: <input type="date" id="txtFecha" name="textFecha" /><br/>
             Fecha Fin: <input type="date" id="txtFechaFin" name="textFechaFin" /><br/>
 
             <!--faltaun hidden es un tipo de dato oculto
-            ej: Id: <input type="hidden" id="txtId" name="txtId" /><br/> -->
+            ej: Id: <input type="hidden" id="txtId" name="txtId" /><br/> ->
            
             Título: <input type="text" id="txtTitulo" height="490px"/> <br/>
-            <!-- Hora: <input type="text" id="txtHora"  /> <br/> -->
+            <!-- Hora: <input type="text" id="txtHora"  /> <br/> ->
 
             Descripción: <textarea id="txtDescripcion" rows="3"></textarea> <br/>
             Color: <input type="color" value="#ff0000" id="txtColor"> <br/>
-        </center>
-        </div>
-        <!-- <div class="modal-body">
+        
+        </div> -->
+        <div class="modal-body">
             <form id="eventForm">
                 <div class="form-group">
                     <label for="txtId">Id:</label>
                     <input type="text" id="txtId" name="txtId" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="txtFecha">Fecha:</label>
+                    <label for="txtFecha">Fecha inicio:</label>
                     <input type="date" id="txtFecha" name="textFecha" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="txtHora">Hora:</label>
-                    <input type="time" id="txtHora" class="form-control" />
+                    <label for="txtFechaFin">Fecha fin:</label>
+                    <input type="date" id="txtFechaFin" name="textFecha" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label for="txtTitulo">Título:</label>
@@ -146,7 +146,7 @@
                     <input type="color" value="#ff0000" id="txtColor" class="form-control" />
                 </div>
             </form>
-        </div> -->
+        </div>
         <div class="modal-footer">
           <button type="button" id="btnAgregar" class="btn btn-success">Agregar</button>
           <button type="button" id="btnModificar" class="btn btn-success">Modificar</button>

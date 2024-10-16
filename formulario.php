@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedir Vacaciones</title>
+    <link rel="stylesheet" href="CSS/formulario.css">
     <script>
         function validarFechas() {
             const fechaA = new Date(document.getElementById("fechaA").value);
@@ -40,6 +41,7 @@
             }
         ?>    
     <br>
+    <div class="tarjetaREGISTRO">
         <label for="Nombre">Nombre y apellido:</label>
         <input type="string" id="Nombre" name="nombre" required><br><br>
 
@@ -48,8 +50,9 @@
 
         <label for="fechaB">Fecha Final:</label>
         <input type="date" id="fechaB" name="fecha_final" required><br><br>
-
+        <p>Tene en cuenta que la fecha final es la fecha de reincorporacion</p>
         <button type="submit">Guardar Fechas</button>
+    </div>
     </form>
 </body>
 </html>

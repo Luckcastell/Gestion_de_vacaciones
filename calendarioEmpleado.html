@@ -60,7 +60,7 @@
                 $("#ModalEventos").modal(); // muestra el modal 
             }, 
 
-            events:'http://localhost/calendarioweb/eventos.php', 
+            events:'http://localhost/Gestion_de_vacaciones/eventos.php', 
 
             eventClick: function(calEvent, jsEvent, view){
                 // H2
@@ -104,7 +104,7 @@
           </button>
         </div>
         <div class="modal-body">
-        <center>
+        
             Id: <input type="text" id="txtId" name="txtId" /><br/>
             Fecha: <input type="date" id="txtFecha" name="textFecha" /><br/>
             Fecha Fin: <input type="date" id="txtFechaFin" name="textFechaFin" /><br/>
@@ -117,7 +117,7 @@
 
             Descripción: <textarea id="txtDescripcion" rows="3"></textarea> <br/>
             Color: <input type="color" value="#ff0000" id="txtColor"> <br/>
-        </center>
+        
         </div>
         <!-- <div class="modal-body">
             <form id="eventForm">
@@ -147,12 +147,15 @@
                 </div>
             </form>
         </div> -->
+
         <div class="modal-footer">
-          <button type="button" id="btnAgregar" class="btn btn-success">Agregar</button>
+            <button type="button" id="btnSolicitar" class="btn btn-success">Solicitar</button>
+        </div>
+            <!--     Lo puse como codigo por que el emplado no puede realizar las opciones de    
           <button type="button" id="btnModificar" class="btn btn-success">Modificar</button>
           <button type="button" id="btnEliminar" class="btn btn-danger">Borrar</button> 
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        </div>
+         -->
       </div>
     </div> 
   </div>
@@ -161,12 +164,13 @@
 <script>
 var NuevoEvento;
 
-$('#btnAgregar').click(function(){ // cuando el usuario presiona el boton se recolectan los valores, se deposita mediante el gui
+$('#btnSolicitar').click(function(){ // cuando el usuario presiona el boton se recolectan los valores, se deposita mediante el gui
     RecolectarDatosGUI(); 
     EnviarInformacion('agregar', NuevoEvento); 
 
 }); 
 
+/*Lo comentamos
 $('#btnEliminar').click(function(){ // cuando el usuario presiona el boton se recolectan los valores, se deposita mediante el gui
     RecolectarDatosGUI(); 
     EnviarInformacion('eliminar', NuevoEvento); 
@@ -177,7 +181,7 @@ $('#btnModificar').click(function(){ // cuando el usuario presiona el boton se r
     RecolectarDatosGUI(); 
     EnviarInformacion('modificar', NuevoEvento); 
 
-}); 
+});*/
 
 function RecolectarDatosGUI(){
     NuevoEvento = {
