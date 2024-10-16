@@ -1,33 +1,41 @@
 <?php
-$servidor = "localhost";
-$User = "root";
-$pass = "";
-$BD = "vacaciones_BD";
+include('Conexion.php');
+session_start();
+    if (!isset($_SESSION['email'])) {
+        // Si no hay sesión iniciada, redirige al Inicio :)
+        header("Location: index.php");
+        exit();
+    }
+// Obtener datos del formulario
 
-// Crear conexión
-$conexion = new mysqli($servidor, $User, $pass, $BD);
-
-// Verificar conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-// Obtener los datos del formulario
-$id_usuario = $_POST['id_usuario'];
 $fecha_inicio = $_POST['fecha_inicio'];
 $fecha_final = $_POST['fecha_final'];
 
+// Obtener el ID del empleado desde la sesión
+$id_empleado = $_SESSION['id_empleado'] ?? null;
+
+if ($id_empleado === null) {
+    die('El ID del usuario no está presente en la sesión.');
+}
+
 // Insertar los datos en la base de datos
-$sql = "INSERT INTO vacaciones (id_usuario, fecha_inicio, fecha_final) VALUES (?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("iss", $id_usuario, $fecha_inicio, $fecha_final);
+$sql = "INSERT INTO vacaciones (id_empleado, fecha_inicio, fecha_final, estado) VALUES (?, ?, ?, 'En espera')";
+$stmt = $conexion->prepare($sql);
+
+if ($stmt === false) {
+    die('Error pidiendo vacaciones: ' . $conexion->error);
+}
+
+$stmt->bind_param("iss", $id_empleado, $fecha_inicio, $fecha_final);
 
 if ($stmt->execute()) {
-    echo "Fechas guardadas correctamente.";
+    header("Location: formulario.php?uf=¡se ha enviado la petición exitosamente!");
+    exit();
 } else {
-    echo "Error al guardar las fechas: " . $conn->error;
-    }
+    echo "Error: " . $conexion->error;
+    header("Location: formulario.php?uf=No se pudo enviar correctamente...");
+    exit();
+}
 
-// Cerrar la conexión
 $stmt->close();
-$conn->close();
 ?>

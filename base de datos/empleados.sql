@@ -44,6 +44,8 @@ CREATE TABLE `empleados` (
 INSERT INTO `empleados` (`id_empleado`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `clave`) VALUES
 (1, 'Luca', 'Castelli', 'pedernera 850', '6464-8979', 'luca.castelli1010@gmail.com', 'hola_mundo');
 
+INSERT INTO `empleados` (`id_empleado`, `nombre`, `apellido`, `direccion`, `telefono`, `email`, `clave`) VALUES
+(2, 'Natali', 'Rodriguez', 'caba', '1122334556', 'natu306@gmail.com', 'helpme');
 --
 -- Índices para tablas volcadas
 --

@@ -1,9 +1,17 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['email'])) {
+        // Si no hay sesión iniciada, redirige al Inicio :)
+        header("Location: index.php");
+        exit();
+    }
+    ?>
 <!DOCTYPE html>
-<html lang="en">            <!-- Nos falta arreglar un error de que se va de la pagina al enviar los formularios -->
+<html lang="es">      
 <head>                      <!-- y darle diseño con el archivo .css -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selector de fechas</title>
+    <title>Pedir Vacaciones</title>
     <script>
         function validarFechas() {
             const fechaA = new Date(document.getElementById("fechaA").value);
@@ -19,16 +27,19 @@
     </script>
 </head>
 <body>
-    <form action="conexionBD.php" method="POST">
-        <label for="id">Ingresa tu ID:</label>
-        <input type="number" id="id" name="id" required>
-        <input type="submit" value="Verificar">
-    </form>
     <form action="guardar.php" method="POST" onsubmit="return validarFechas();">
-        <br><br>
-        <label for="id">ID Usuario:</label>
-        <input type="number" id="id" name="id_usuario" required><br><br>
-
+    <?php
+            if (isset($_GET['uf'])) {
+            ?>
+            <p>
+                <?php
+                    echo $_GET['uf']
+                 ?>
+            </p>
+        <?php
+            }
+        ?>    
+    <br>
         <label for="fechaA">Fecha Inicio:</label>
         <input type="date" id="fechaA" name="fecha_inicio" required><br><br>
 

@@ -29,7 +29,7 @@
                 Ingresa aqui para pedir tus vacaciones.</center>
             </div>
             <div class="pie">     
-                <form action="formulario.html" method="post">
+                <form action="formulario.php" method="post">
                     <button type="submit">Pedir tus vacaciones aqui.</button>
                 </form>
             </div>
