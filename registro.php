@@ -11,22 +11,22 @@
         <h2>Registro de Usuario</h2>
         <form action="registroBD.php" method="post">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" required><br><br>
 
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required><br><br>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" required><br><br>
 
             <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" required><br><br>
+            <input type="text" id="direccion" name="direccion" placeholder="Ingresar Direccion" required><br><br>
 
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required><br><br>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingresar Telefono" required><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Ingresar Email" required><br><br>
 
             <label for="contrasena">Contraseña:</label>
-            <input type="password" id="clave" name="contrasena" required><br><br>
+            <input type="password" id="clave" name="contrasena"  placeholder="Ingresar Contrasena" required><br><br>
 
             <input type="submit" value="Registrar">
             <br>

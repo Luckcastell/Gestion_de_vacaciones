@@ -43,7 +43,7 @@
     <br>
     <div class="tarjetaREGISTRO">
         <label for="Nombre">Nombre y apellido:</label>
-        <input type="string" id="Nombre" name="nombre" required><br><br>
+        <input type="string" id="Nombre" name="nombre" required ><br><br>
 
         <label for="fechaA">Fecha Inicio:</label>
         <input type="date" id="fechaA" name="fecha_inicio" required><br><br>
@@ -51,7 +51,20 @@
         <label for="fechaB">Fecha Final:</label>
         <input type="date" id="fechaB" name="fecha_final" required><br><br>
         <p>Tene en cuenta que la fecha final es la fecha de reincorporacion</p>
-        <button type="submit">Guardar Fechas</button>
+        <!-- <button type="submit">Guardar Fechas</button> -->
+        <button type="submit" >Guardar</button>
+        
+
+        <form action="calendarioEmpleado.html" method="post">
+            <button type="submit" >Ver Calendario</button>
+        </form>
+        <form action="perdirOVerVacacionesEmpleado.php" method="post">
+            <button type="submit">Volver Atras</button>
+        </form>
+
+
+
+
     </div>
     </form>
 </body>
