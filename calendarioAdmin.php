@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/moment.min.js"></script>
-    <!-- Full Calendar -->
     <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <script src="js/fullcalendar.min.js"></script>
     <script src="js/es.js"></script>
 
@@ -25,12 +25,14 @@
         </div>
     </div>
 
+    <form action="administrarVacaciones.php" method="post">
+        <button type="submit">Volver Atras</button>
+    </form>
 <script>
     $(document).ready(function(){
         $('#calendarioweb').fullCalendar({
             header:{
                 left:'month,basicWeek',
-                // left:'month,basicWeek, basicDay, agendaWeek, agendaDay, miboton',
                 center:'title',
                 rigth:'today,prev,next'
             },
@@ -41,20 +43,8 @@
                 $('#txtFechaFin').val(end.format()); // Establecer fecha de fin
                 $('#ModalEventos').modal(); // Mostrar el modal
             },
-            // customButtons:{
-            //     miboton:{
-            //         text: "boton1", 
-            //         click: function(){
-            //             alert("accion del boton1"); 
-            //         }
-            //     }
-            // },
             
             dayClick:function(date,jsEvent, view){
-                // alert("Valor seleccionado:"+date. format());
-                // alert("Vista actual:"+ view.name);
-                // $(this).css ('background-color' , 'red');
-                // $("#exampleModal").modal();
                                                      
                 $('#txtFecha').val(date.format()); // obtener el valor de la fecha de forma automatica 
                 $("#ModalEventos").modal(); // muestra el modal 
@@ -63,17 +53,12 @@
             events:'http://localhost/Gestion_de_vacaciones/eventos.php', 
 
             eventClick: function(calEvent, jsEvent, view){
-                // H2
                 $('#tituloEvento').html(calEvent.title); 
                 // mostra la informacion del evento en los inputs 
                 $('#txtDescripcion').val(calEvent.descripcion); 
                 $('#txtId').val(calEvent.id); 
                 $('#txtTitulo').val(calEvent.title); 
                 $('#txtColor').val(calEvent.color); 
-
-                // FechaHora = calEvent.start._i.split(" "); // el datoque viene de caltevent start, lo vas a transformar en un formato el cual se va depositar y lo va a dividir en dos
-                // $('#txtFecha').val(FechaHora[0]); // primera parte
-                // $('#txtHora').val(FechaHora[1]); // segunda parte 
 
                 FechaHora = calEvent.start._i.split(" ");
                 $('#txtFecha').val(FechaHora[0]); // Establecer fecha de inicio
@@ -83,7 +68,6 @@
                     var endDateTime = calEvent.end._i.split(" ");
                     $('#txtFechaFin').val(endDateTime[0]); // Establecer fecha de fin
                 }
-
 
                 $("#ModalEventos").modal(); 
             }
@@ -103,22 +87,6 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <!-- <div class="modal-body">
-        
-            Id: <input type="text" id="txtId" name="txtId" /><br/>
-            Fecha: <input type="date" id="txtFecha" name="textFecha" /><br/>
-            Fecha Fin: <input type="date" id="txtFechaFin" name="textFechaFin" /><br/>
-
-            faltaun hidden es un tipo de dato oculto
-            ej: Id: <input type="hidden" id="txtId" name="txtId" /><br/> ->
-           
-            Título: <input type="text" id="txtTitulo" height="490px"/> <br/>
-             Hora: <input type="text" id="txtHora"  /> <br/> ->
-
-            Descripción: <textarea id="txtDescripcion" rows="3"></textarea> <br/>
-            Color: <input type="color" value="#ff0000" id="txtColor"> <br/>
-        
-        </div> -->
         <div class="modal-body">
             <form id="eventForm">
                 <div class="form-group">
